@@ -20,13 +20,15 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           key: ${{ secrets.SSH_KEY }}
-          # key = AWS EC2 인스턴스 생성 시 키 페어 내용(.pem)
+          # keygen으로 생성한 OPEN PRIVATE SSH KEY
           host: ${{ secrets.HOST }}
           # EC2 인스턴스 IP
+          # 퍼블릭 IPv4 DNS를 써야한다는 이야기도 있음.
           username: ${{ secrets.USER }}
           # 사용자 이름
           script: |
-            cd server
+            cd ~
+            cd cidiPrac
             git reset --hard
             git fetch
             git pull
