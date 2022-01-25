@@ -23,7 +23,8 @@ jobs:
           # keygen으로 생성한 rsa키 중 공개키(.pub)를 넣어줍니다.
           host: ${{ secrets.HOST }}
           # 퍼블릭 IPv4 DNS를 넣어준다.
-          username: ${{ secrets.USER }}
+          # username: ${{ secrets.USER }}
+          username: ${{github.actor}}
           # 서버 접속 계정명
           # 하단의 스크립트는 오류나 사용자 상황에 따라 다르게 넣어준다.
           script: |
