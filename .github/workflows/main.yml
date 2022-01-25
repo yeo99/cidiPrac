@@ -20,11 +20,11 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           key: ${{ secrets.SSH_KEY }}
-          # .pem키를 aws ec2 ~/.ssh/ 하위에 같은 이름으로 작성해준다.
+          # keygen으로 생성한 rsa키 중 공개키(.pub)를 넣어줍니다.
           host: ${{ secrets.HOST }}
           # 퍼블릭 IPv4 DNS를 넣어준다.
           username: ${{ secrets.USER }}
-          # 숫자로 된 aws 사용자 이름을 넣어준다.
+          # AWS 콘솔 우측상단의 본인 아이디를 클릭 했을 때 나오는 계정 ID를 넣어줍니다.(숫자12자리)
           # 하단의 스크립트는 오류나 사용자 상황에 따라 다르게 넣어준다.
           script: |
             cd ~
