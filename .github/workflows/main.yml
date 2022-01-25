@@ -24,7 +24,7 @@ jobs:
           host: ${{ secrets.HOST }}
           # 퍼블릭 IPv4 DNS를 넣어준다.
           username: ${{ secrets.USER }}
-          # AWS 콘솔 우측상단의 본인 아이디를 클릭 했을 때 나오는 계정 ID를 넣어줍니다.(숫자12자리)
+          # 서버 접속 계정명
           # 하단의 스크립트는 오류나 사용자 상황에 따라 다르게 넣어준다.
           script: |
             cd ~
